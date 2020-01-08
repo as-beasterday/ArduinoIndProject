@@ -1,6 +1,6 @@
 /*
- * Programmer: me
- * Program: medical sensor suit
+ * Programmer: Braeden
+ * Program: Medical sensor suit
  * 
  * The suit will have many sensors that monitor a person's vitals
  * Sensors will be added as I progress
