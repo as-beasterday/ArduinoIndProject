@@ -24,5 +24,6 @@ void loop() {
   T = T - 273.15;
   T = (T * 9.0)/ 5.0 + 32.0; 
 
+  Serial.println(T);
   delay(500);
 }
