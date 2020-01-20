@@ -34,7 +34,9 @@ void loop() {
   T = (T * 9.0)/ 5.0 + 32.0; 
 
   Serial.println(Signal);
-  Serial.println(T);
+  Serial.print("Temperature: ");
+  Serial.print(T);
+  Serial.println(" F");
   if(Signal > threshold){
     digitalWrite(led13,HIGH);
   }else{
