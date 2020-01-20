@@ -12,11 +12,20 @@ float R1 = 10000;
 float logR2, R2, T;
 float c1 = 1.009249522e-03, c2 = 2.378405444e-04, c3 = 2.019202697e-07;
 
+int pulseSensor = 1;
+int Signal;
+int threshold = 550;
+int led13 = 13;
+
+
+
 void setup() {
+  pinMode(led13, OUTPUT);
   Serial.begin(9600);
 }
 
 void loop() {
+  Signal = analogRead(pulseSensor);
   Vo = analogRead(thermistorPin);
   R2 = R1 * (1023.0 / (float)Vo - 1.0);
   logR2 = log(R2);
@@ -24,6 +33,12 @@ void loop() {
   T = T - 273.15;
   T = (T * 9.0)/ 5.0 + 32.0; 
 
+  Serial.println(Signal);
   Serial.println(T);
+  if(Signal > threshold){
+    digitalWrite(led13,HIGH);
+  }else{
+    digitalWrite(led13,LOW);
+  }
   delay(500);
 }
