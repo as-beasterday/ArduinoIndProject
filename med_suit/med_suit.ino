@@ -32,11 +32,11 @@ void loop() {
   T = (1.0 / (c1 + c2*logR2 + c3*logR2*logR2*logR2));
   T = T - 273.15;
   T = (T * 9.0)/ 5.0 + 32.0; 
-
-  Serial.println(Signal);
-  Serial.print("Temperature: ");
-  Serial.print(T);
-  Serial.println(" F");
+  
+  
+  Serial.print(Signal);
+  Serial.print(" ");
+  Serial.println(T);
   if(Signal > threshold){
     digitalWrite(led13,HIGH);
   }else{
