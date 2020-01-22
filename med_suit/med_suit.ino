@@ -14,13 +14,10 @@ float c1 = 1.009249522e-03, c2 = 2.378405444e-04, c3 = 2.019202697e-07;
 
 int pulseSensor = 1;
 int Signal;
-int threshold = 550;
-int led13 = 13;
 
 
 
 void setup() {
-  pinMode(led13, OUTPUT);
   Serial.begin(9600);
 }
 
@@ -37,10 +34,6 @@ void loop() {
   Serial.print(Signal);
   Serial.print(" ");
   Serial.println(T);
-  if(Signal > threshold){
-    digitalWrite(led13,HIGH);
-  }else{
-    digitalWrite(led13,LOW);
-  }
+  
   delay(500);
 }
