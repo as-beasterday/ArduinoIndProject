@@ -62,8 +62,8 @@ void loop() {
 /*
  * Equip Procedure
  * 
- * pulse sensor attached to finger - side with heart facing fingertip
+ * pulse sensor attached to finger - side with heart facing fingertip - good
  * mask on face
- * body temp thermistor attached to forehead
+ * body temp thermistor attached to forehead - good
  * 
  */
